@@ -100,11 +100,14 @@ class Mobi
 
       # Append to the content string!
       if mobiHeader.compression is 1
-        @info.content += data
+        compressor = require('./Compressors/NoCompression').decompress
       else if mobiHeader.compression is 2
-        @info.content += @palmdocReader(data)
+        compressor = require('./Compressors/PalmdocCompression').decompress
       else
         throw new Error("LZ77 compression isn't supported... yet.")
+      data = compressor(data)
+      console.log(data)
+      @info.content += data
 
     @info.content = @info.content.replace(/<(head|HEAD)>/g,
       '<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>')
@@ -123,8 +126,6 @@ class Mobi
         data = data.slice(0, data.length-num)
 
     data
-
-
 
   palmdocReader: (data) ->
     string = ''
