@@ -1,0 +1,14 @@
+{
+  "name": "mobi",
+  "version": "0.0.1",
+  "description": "Parse and package .mobi files",
+  "author": "Chris Barna <chris@unbrain.net>",
+  "main": "main.js",
+  "dependencies": {
+    "pypacker": "0.2.1"
+  },
+  "devDependencies": {
+    "mocha": ">=1.3.2",
+    "chai": ">=1.2.0"
+  }
+}
