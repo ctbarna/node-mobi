@@ -2,3 +2,4 @@
 /node_modules
 /examples/mobiunpack.py
 /examples/test.html
+/examples/*.mobi
