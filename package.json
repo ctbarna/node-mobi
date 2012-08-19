@@ -1,7 +1,7 @@
 {
   "name": "mobi",
   "version": "0.0.1",
-  "description": "Parse and package .mobi files",
+  "description": "Parse .mobi files",
   "author": "Chris Barna <chris@unbrain.net>",
   "main": "main.js",
   "dependencies": {
