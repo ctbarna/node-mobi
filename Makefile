@@ -1,5 +1,5 @@
 all:
-	@coffee -o lib -c src/*.coffee
+	@coffee -o lib -c src/
 
 example:
 	cd examples; node example.js
