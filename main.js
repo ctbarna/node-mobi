@@ -1,1 +1,1 @@
-module.exports = require('./lib/mobi');
+module.exports = require('./lib/Mobi');
